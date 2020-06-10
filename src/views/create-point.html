@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    <title>Criar ponto de coleta</title>
+{% endblock title %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/style/create-point.css"/>
+    <link rel="stylesheet" href="/style/modal.css"/>
+{% endblock styles %}
+
+{# <div id="page-create-point"> #}
+{% set bodyId = "page-create-point" %}
+
+{% block content %}
+    {% include "partials/page-header.html" %}
+
+    {% include "partials/form.html" %}
+    
+{% endblock content %}
+
+{% block modal %}
+    {% if saved %}
+        {% include "partials/point-created.html" %}
+    {% endif %}
+{% endblock modal %}
+
+{% block scripts %}
+    <script src="./scripts/create-point.js"></script>
+{% endblock scripts %}
